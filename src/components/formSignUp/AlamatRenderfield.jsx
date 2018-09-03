@@ -11,7 +11,7 @@ const alamatRender = (fields) => {
                         <span className="errorStyle">{fields.alamat.meta.error}</span>}
                 </div>
                 <div className="input-row">
-                    <input {...fields.alamat2.input} type="text" placeholder="jln.Tata Surya 2 No 21"/>
+                    <input {...fields.alamat2.input} type="text" placeholder="Kota dan Provinsi"/>
                     {fields.alamat2.meta.touched && fields.alamat2.meta.error &&
                         <span className="errorStyle">{fields.alamat2.meta.error}</span>}
                 </div>

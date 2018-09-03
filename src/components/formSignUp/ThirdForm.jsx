@@ -5,7 +5,7 @@ import RenderField from './RenderField'
 import { HomestayDummySelector } from './AgamaDummySelector'
 import { Button, Row, Col, Card } from 'reactstrap'
 
-class SecondForm extends Component {
+class ThirdForm extends Component {
     render() {
         const { handleSubmit, previousPage } = this.props
         return (
@@ -47,12 +47,12 @@ class SecondForm extends Component {
                                     <label>Apa Keluarga Anda Akan Berkunjung Sewaktu-waktu ?</label>
                                     <div>
                                         <label style={{ marginRight: "20px" }}>
-                                            <Field name="kunjungan" component="input" type="radio" value="true" />
+                                            <Field name="kunjungan" component="input" type="radio" value="iya" />
                                             {' '}
                                             Iya
                     </label>
                                         <label>
-                                            <Field name="kunjungan" component="input" type="radio" value="false" />
+                                            <Field name="kunjungan" component="input" type="radio" value="tidak" />
                                             {' '}
                                             Tidak
                     </label>
@@ -63,12 +63,12 @@ class SecondForm extends Component {
                                     <label>Apa Anda Membutuhkan Siraman Rohani ?</label>
                                     <div>
                                         <label style={{ marginRight: "20px" }}>
-                                            <Field name="konseling" component="input" type="radio" value="true" />
+                                            <Field name="konseling" component="input" type="radio" value="iya" />
                                             {' '}
                                             Iya
                     </label>
                                         <label>
-                                            <Field name="konseling" component="input" type="radio" value="false" />
+                                            <Field name="konseling" component="input" type="radio" value="tidak" />
                                             {' '}
                                             Tidak
                     </label>
@@ -79,12 +79,12 @@ class SecondForm extends Component {
                                     <label>Apa Anda Membutuhkan Hiburan Seperti Internet Dan Tv Kabel?</label>
                                     <div>
                                         <label style={{ marginRight: "20px" }}>
-                                            <Field name="hiburan" component="input" type="radio" value="true" />
+                                            <Field name="hiburan" component="input" type="radio" value="iya" />
                                             {' '}
                                             Iya
                     </label>
                                         <label>
-                                            <Field name="hiburan" component="input" type="radio" value="false" />
+                                            <Field name="hiburan" component="input" type="radio" value="tidak" />
                                             {' '}
                                             Tidak
                     </label>
@@ -113,4 +113,4 @@ export default reduxForm({
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
-})(SecondForm)
+})(ThirdForm)

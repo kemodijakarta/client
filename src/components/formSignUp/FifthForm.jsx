@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import history from '../../history'
-import { Container, Card, Table, Col, Row,Button } from 'reactstrap'
+import { Container, Card, Table, Col, Row, Button } from 'reactstrap'
 
 export default class FifthForm extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ export default class FifthForm extends Component {
                 aliran: '',
                 sex: '',
                 alamat: '',
-                alamat2:'',
+                alamat2: '',
                 noTelp: '',
                 Asuransi: '',
                 namaContactDarurat: '',
@@ -27,8 +27,8 @@ export default class FifthForm extends Component {
             },
             fasilitas: {
                 homestay: '',
-                kamarMandiDalam: '',
-                Tv: '',
+                kamarMandiDalam: undefined,
+                Tv: undefined,
                 kunjungan: '',
                 konseling: '',
                 hiburan: '',
@@ -46,7 +46,7 @@ export default class FifthForm extends Component {
         }
     }
     componentDidMount() {
-        if(!localStorage.getItem('formUser')){
+        if (!localStorage.getItem('formUser')) {
             history.push('/')
         }
         const dataUser = JSON.parse(localStorage.getItem('formUser'))
@@ -72,8 +72,8 @@ export default class FifthForm extends Component {
         }
         const fas = {
             homestay: dataUser.homestay,
-            kamarMandiDalam: String(dataUser.kamarMandiDalam),
-            Tv: String(dataUser.Tv),
+            kamarMandiDalam:dataUser.kamarMandiDalam,
+            Tv:dataUser.Tv,
             kunjungan: dataUser.kunjungan,
             konseling: dataUser.konseling,
             hiburan: dataUser.hiburan,
@@ -96,14 +96,14 @@ export default class FifthForm extends Component {
         })
     }
 
-    BackToHome(){
+    BackToHome() {
         localStorage.clear()
         history.push('/')
     }
 
     render() {
         const { biodata, kesehatan, fasilitas, budget } = this.state
-        console.log('ini asa', biodata.agama)
+        // console.log('ini asa', biodata.agama)
         return (
             <Container>
                 <div>
@@ -262,17 +262,31 @@ export default class FifthForm extends Component {
                                                 </tr>
                                             </tbody>
                                             <tbody>
-                                                <tr>
-                                                    <td>kamar Mandi Dalam</td>
-                                                    <td>{fasilitas.kamarMandiDalam}</td>
-                                                </tr>
+                                                {
+                                                    (fasilitas.tv === undefined) ?
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        : <tr>
+                                                            <td>Tv</td>
+                                                            <td>{String(fasilitas.tv)}</td>
+                                                        </tr>
+                                                }
                                             </tbody>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Tv</td>
-                                                    <td>{fasilitas.Tv}</td>
-                                                </tr>
-                                            </tbody>
+                                            {
+                                                (fasilitas.kamarMandiDalam === undefined) ? <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody> : <tbody>
+                                                        <tr>
+                                                            <td>Kamar Mandi Dalam</td>
+                                                            <td>{String(fasilitas.kamarMandiDalam)}</td>
+                                                        </tr>
+                                                    </tbody>
+                                            }
                                             <tbody>
                                                 <tr>
                                                     <td>Kunjungan Keluarga</td>
@@ -361,7 +375,7 @@ export default class FifthForm extends Component {
                         </Col>
                     </Row>
                 </div>
-                <br/>
+                <br />
                 <center>
                     <Button onClick={this.BackToHome} color="success">HALAMAN UTAMA</Button>
                 </center>

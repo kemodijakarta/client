@@ -6,9 +6,9 @@ a.nav-link {
 .clear {
   clear: both;
 }
-::-webkit-scrollbar { 
+/* ::-webkit-scrollbar { 
   display: none; 
-}
+} */
 nav.navbar.navbar-expand-md.navbar-light.bg-white {
   padding: 17px;
   /* background: red !important; */
@@ -826,7 +826,7 @@ a.daftarbtn.nav-link {
 
 .fieldForm{
   /* background: pink; */
-  margin:10px;
+  margin:10px 5px 0px 5px !important;
 }
 
 input[type="text"], input[type="email"],input[type="password"]{

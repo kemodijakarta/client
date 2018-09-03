@@ -8,7 +8,7 @@ import history from '../../history'
 import { Button, Col, Row,Card } from 'reactstrap'
 import BudgetRender from './BudgetRender'
 
-class SecondForm extends Component {
+class FortForm extends Component {
     submit = (values) => {
         // console.log(values)
         axios.post('http://neoal.xyz:3000/api/email/send', { values })
@@ -107,4 +107,4 @@ export default reduxForm({
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
-})(SecondForm)
+})(FortForm)
