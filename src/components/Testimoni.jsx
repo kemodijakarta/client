@@ -9,7 +9,6 @@ class Testimoni extends Component {
           <Row style={{ padding: '100px 0px 10px 0px' }}>
             <Col>
               <h3 style={{ textAlign: 'center' }}>Testimoni</h3>
-              <hr/>
             </Col>
           </Row>
           <Row style={{ padding: '10px 0px 100px 0px' }}>

@@ -52,23 +52,17 @@ class Navigation extends Component {
         <Navbar color="white" light expand="md">
           <Container>
             <NavbarBrand>
-              {/* <NavLink> */}
               <div className="logoWrap">
-                {/* {this.state.showHeader} */}
                 <img className="logo" src={require('../assets/img/logo-kemo.png')} alt="logo"/>
               </div>
-              {/* </NavLink> */}
             </NavbarBrand>
             <NavbarToggler onClick={this.toogle}></NavbarToggler>
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem className="daftarButton">
-                  {/* <Link style={{ background: '#2a7bc1', borderRadius: 5, color: 'white !important'}} to="/register">
-                    DAFTAR
-                  </Link> */}
                   <div style={{ background: 'red' }}>
-                    {/* <Button style={{marginTop: -10, marginBottom: -10, position: 'relative'}} onClick={this.Daftar}> */}
-                    <Button style={{marginTop: -10, marginBottom: -10, position: 'relative'}} onClick={this.showDaftarContainer}>
+                    <Button style={{marginTop: -10, marginBottom: -10, position: 'relative'}} onClick={this.Daftar}>
+                    {/* <Button style={{marginTop: -10, marginBottom: -10, position: 'relative'}} onClick={this.showDaftarContainer}> */}
                       DAFTAR
                     </Button>
                     {
