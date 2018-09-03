@@ -5,6 +5,7 @@ import RenderField from './RenderField'
 import { HomestayDummySelector } from './AgamaDummySelector'
 import { Button, Row, Col, Card } from 'reactstrap'
 
+
 class ThirdForm extends Component {
     render() {
         const { handleSubmit, previousPage } = this.props
@@ -44,7 +45,7 @@ class ThirdForm extends Component {
                             </Col>
                             <Col>
                                 <div>
-                                    <label>Apa Keluarga Anda Akan Berkunjung Sewaktu-waktu ?</label>
+                                    <label>Apa Keluarga Anda Akan Berkunjung Sewaktu-waktu ? (*)</label>
                                     <div>
                                         <label style={{ marginRight: "20px" }}>
                                             <Field name="kunjungan" component="input" type="radio" value="iya" />
@@ -60,7 +61,7 @@ class ThirdForm extends Component {
                                 </div>
                                 <br />
                                 <div>
-                                    <label>Apa Anda Membutuhkan Siraman Rohani ?</label>
+                                    <label>Apa Anda Membutuhkan Siraman Rohani ? (*)</label>
                                     <div>
                                         <label style={{ marginRight: "20px" }}>
                                             <Field name="konseling" component="input" type="radio" value="iya" />
@@ -76,7 +77,7 @@ class ThirdForm extends Component {
                                 </div>
                                 <br />
                                 <div>
-                                    <label>Apa Anda Membutuhkan Hiburan Seperti Internet Dan Tv Kabel?</label>
+                                    <label>Apa Anda Membutuhkan Hiburan Seperti Internet Dan Tv Kabel? (*)</label>
                                     <div>
                                         <label style={{ marginRight: "20px" }}>
                                             <Field name="hiburan" component="input" type="radio" value="iya" />

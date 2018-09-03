@@ -27,7 +27,7 @@ class SecondForm extends Component {
                             </Col>
                             <Col>
                                 <div>
-                                    <label>Stadium</label>
+                                    <label>Stadium (*)</label>
                                     <div>
                                         <label style={{ marginRight: "10px" }}>
                                             <Field name="stadium" component="input" type="radio" value="1" />

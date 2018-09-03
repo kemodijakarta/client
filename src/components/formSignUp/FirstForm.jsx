@@ -6,6 +6,7 @@ import { AgamaDummySelector } from './AgamaDummySelector'
 import { Button, Col, Row, Card } from 'reactstrap'
 import AlamatRender from './AlamatRenderfield'
 
+
 class FirstForm extends Component {
     componentDidMount() {
         // console.log(this.props)
@@ -42,7 +43,7 @@ class FirstForm extends Component {
                                 />
                             </div>
                             <br />
-                            <div className="fieldForm" style={{marginLeft:"5px"}}>
+                            <div className="fieldForm" style={{ marginLeft: "5px" }}>
                                 <label>Agama</label>
                                 <Field className="inpType"
                                     name='agama'
@@ -58,9 +59,19 @@ class FirstForm extends Component {
                                     label='Aliran'
                                 />
                             </div>
+                            <br />
+                            <div className="fieldForm">
+                                <Field
+                                    className="inpType"
+                                    name="tglLahir"
+                                    type="date"
+                                    component={RenderField}
+                                    label="Tanggal Lahir" />
+                            </div>
+                            <br />
                             <div className="fieldForm">
                                 <div>
-                                    <label>Jenis Kelamin</label>
+                                    <label>Jenis Kelamin (*)</label>
                                     <div>
                                         <label style={{ marginRight: "10px" }}>
                                             <Field className="inpType"

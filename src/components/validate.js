@@ -62,6 +62,9 @@ const validate = values => {
   if (!values.aliran) {
     errors.aliran = 'Harus di isi!';
   }
+  if (!values.stadium) {
+    errors.stadium = 'Harus di isi!';
+  }
   if (!values.fasilitas) {
     errors.fasilitas = 'Harus di isi!';
   }
@@ -96,7 +99,7 @@ const validate = values => {
     errors.tanggalMulai = 'Harus di isi!';
   } else if (values.tanggalMulai < String(today) && values.tanggalMulai !== String(today)) {
     console.log('apa aja')
-    errors.tanggalMulai = 'Tanggal Mulai Tidak Boleh Kurang Dari Hari Ini'
+    errors.tanggalMulai = 'Durasi Tidak Boleh Negatif'
   }
   if (!values.tanggalSelesai) {
     errors.tanggalSelesai = 'Harus di isi!';
@@ -114,6 +117,11 @@ const validate = values => {
   }
   if (!values.jenisKanker) {
     errors.jenisKanker = 'Harus di isi!';
+  }
+  if (!values.tglLahir) {
+    errors.tglLahir = 'Harus di isi!';
+  }else if(values.tglLahir >=  String(today)){
+    errors.tglLahir = 'Tanggal Lahir Anda Sebelum Tanggal Hari Ini'
   }
   return errors;
 };
