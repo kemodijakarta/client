@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import validate from '../validate'
-import { Field, reduxForm } from 'redux-form'
-import RenderField from './RenderField'
+import { Field, reduxForm, } from 'redux-form'
+// import RenderField from './RenderField'
 import { HomestayDummySelector } from './AgamaDummySelector'
 import { Button, Row, Col, Card } from 'reactstrap'
-import RadioGroup from './BooleanSelector'
+// import RadioGroup from './BooleanSelector'
+// import { lainRenderer } from './lainRenderer'
+
 
 
 class ThirdForm extends Component {
@@ -33,61 +35,60 @@ class ThirdForm extends Component {
                                     <label htmlFor="fasilitas">Fasilitas :</label>
                                     <div className="fieldForm">
                                         <Row>
-                                            <label htmlFor="kamarMandiDalam" style={{ marginRight: "10px",marginLeft:"10px" }}>Kamar Mandi Dalam  </label>
                                             <Field name="kamarMandiDalam" id="kamarMandiDalam" component="input" type="checkbox" />
+                                            <label htmlFor="kamarMandiDalam" style={{ marginRight: "10px", marginLeft: "10px" }}>Kamar Mandi Dalam  </label>
                                         </Row>
                                         <Row>
-                                            <label htmlFor="Tv" style={{ marginRight: "10px",marginLeft:"10px" }}>Tv Pribadi  </label>
                                             <Field name="Tv" id="Tv" component="input" type="checkbox" />
+                                            <label htmlFor="Tv" style={{ marginRight: "10px", marginLeft: "10px" }}>Tv Pribadi  </label>
                                         </Row>
                                         <Row>
-                                            <label htmlFor="Tv" style={{ marginRight: "10px",marginLeft:"10px" }}>Wifi  </label>
                                             <Field name="wifi" id="wifi" component="input" type="checkbox" />
+                                            <label htmlFor="wifi" style={{ marginRight: "10px", marginLeft: "10px" }}>Wifi  </label>
                                         </Row>
                                         <Row>
-                                            <label htmlFor="perawat" style={{ marginRight: "10px",marginLeft:"10px" }}>Perawat 24 Jam  </label>
                                             <Field name="perawat" id="perawat" component="input" type="checkbox" />
+                                            <label htmlFor="perawat" style={{ marginRight: "10px", marginLeft: "10px" }}>Perawat 24 Jam  </label>
                                         </Row>
                                         <Row>
-                                            <label htmlFor="alkes" style={{ marginRight: "10px",marginLeft:"10px" }}>Alat Kesehatan  </label>
                                             <Field name="alkes" id="alkes" component="input" type="checkbox" />
+                                            <label htmlFor="alkes" style={{ marginRight: "10px", marginLeft: "10px" }}>Alat Kesehatan  </label>
                                         </Row>
                                         <Row>
-                                            <label htmlFor="edukasi" style={{ marginRight: "10px",marginLeft:"10px" }}>Edukasi Kanker  </label>
                                             <Field name="edukasi" id="edukasi" component="input" type="checkbox" />
+                                            <label htmlFor="edukasi" style={{ marginRight: "10px", marginLeft: "10px" }}>Edukasi Kanker  </label>
                                         </Row>
                                     </div>
                                 </div>
                                 <br />
                             </Col>
                             <Col>
-                                <div className="fieldForm">
-                                    <Field
-                                        className="inpType"
-                                        component={RadioGroup}
-                                        required={true}
-                                        name="kunjungan"
-                                        options={[
-                                            { title: 'Iya', value: 'Iya' },
-                                            { title: 'Tidak', value: 'Tidak' },
-                                        ]}
-                                        label="Apa Keluarga Anda Akan Berkunjung Sewaktu-waktu ?"
-                                    />
-                                </div>
+                                <Row>
+                                    <Field name="kunjungan" id="kunjungan" component="input" type="checkbox" />
+                                    <label htmlFor="kunjungan" style={{ marginRight: "10px", marginLeft: "10px" }}>Apa Keluarga Anda Akan Berkunjung Sewaktu-waktu ?</label>
+                                </Row>
+                                <Row>
+                                    <Field name="konseling" id="konseling" component="input" type="checkbox" />
+                                    <label htmlFor="konseling" style={{ marginRight: "10px", marginLeft: "10px" }}>Apa Anda Membutuhkan Konseling/Siraman Rohani ?</label>
+                                </Row>
                                 <br />
-                                <div className="fieldForm">
-                                    <Field
-                                        className="inpType"
-                                        component={RadioGroup}
-                                        required={true}
-                                        name="konseling"
-                                        options={[
-                                            { title: 'Iya', value: 'Iya' },
-                                            { title: 'Tidak', value: 'Tidak' },
-                                        ]}
-                                        label="Apa Anda Membutuhkan Konseling/Siraman Rohani ?"
-                                    />
-                                </div>
+                                <Row>
+                                    {/* <div className="fieldForm">
+                                        <Fields className="inpType"
+                                            names={['kebutuhan1','kebutuhan2','kebutuhan3','kebutuhan4','kebutuhan5']}
+                                            component={lainRenderer}
+                                        />
+                                    </div> */}
+                                    <div className="fieldForm">
+                                        <label htmlFor="">Kebutuhan Anda Yang Lain</label>
+                                        <br/>
+                                        <Field className="inpType"
+                                            name='lainLain'
+                                            component="textarea"
+                                            style={{width:"240%",height:"120px"}}
+                                        />
+                                    </div>
+                                </Row>
                             </Col>
                         </Row>
                         <div>

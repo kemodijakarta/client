@@ -74,20 +74,24 @@ const validate = values => {
   if (!values.transportasi) {
     errors.transportasi = 'Harus di isi!';
   }
-  if (!values.kunjungan) {
-    errors.kunjungan = 'Harus di isi!';
-  }
-  if (!values.konseling) {
-    errors.konseling = 'Harus di isi!';
-  }
+  // if (!values.kunjungan) {
+  //   errors.kunjungan = 'Harus di isi!';
+  // }
+  // if (!values.konseling) {
+  //   errors.konseling = 'Harus di isi!';
+  // }
   if (!values.budget) {
     errors.budget = 'Harus di isi!';
+  }else if(values.budget < 0){
+    errors.budget = 'Budget Tidak Boleh Minus!'
   }
   if (!values.rumahSakit) {
     errors.rumahSakit = 'Harus di isi!';
   }
   if (!values.jadwalTreatment) {
     errors.jadwalTreatment = 'Harus di isi!';
+  }else if(values.jadwalTreatment < 0){
+    errors.jadwalTreatment = 'Tidak Boleh Minus!'
   }
   if (!values.namaContactDarurat) {
     errors.namaContactDarurat = 'Harus di isi!';
@@ -112,9 +116,9 @@ const validate = values => {
   if (!values.datangDengan) {
     errors.datangDengan = 'Harus di isi!';
   }
-  if (!values.lainLain) {
-    errors.lainLain = 'Harus di isi!';
-  }
+  // if (!values.lainLain) {
+  //   errors.lainLain = 'Harus di isi!';
+  // }
   if (!values.jenisKanker) {
     errors.jenisKanker = 'Harus di isi!';
   }

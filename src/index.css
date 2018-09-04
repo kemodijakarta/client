@@ -830,8 +830,7 @@ a.daftarbtn.nav-link {
 }
 
 input[type="text"], input[type="email"],input[type="password"]{
-  width:100% !important;
-  /* background:yellow !important; */
+  width:100%;
 }
 
 .formContainer{ 
@@ -848,4 +847,11 @@ input[type="text"], input[type="email"],input[type="password"]{
   .errorStyle{
     font-weight: bold;
     color: red !important
+  }
+
+  Table{
+    font-size: 15px;
+  }
+  tbody > tr > td{
+    width:50px !important;
   }

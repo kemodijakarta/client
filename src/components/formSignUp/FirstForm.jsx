@@ -16,7 +16,7 @@ class FirstForm extends Component {
         const { handleSubmit } = this.props
         return (
             <Card>
-                <Card>
+                <Card  style={{ marginBottom: "4px" }}>
                     <center>
                         <h1>Biodata Klien</h1>
                     </center>
@@ -24,6 +24,7 @@ class FirstForm extends Component {
                 <form onSubmit={handleSubmit} className="wizardForm">
                     <Row>
                         <Col>
+                            <label style={{ marginRight: "100px", marginLeft: "100px", color: "#0061D7" , fontSize:"20px"}}><strong><center>IDENTITAS</center></strong></label>
                             <div className="fieldForm">
                                 <Field
                                     className="inpType"
@@ -44,22 +45,27 @@ class FirstForm extends Component {
                                 />
                             </div>
                             <br />
-                            <div className="fieldForm" style={{ marginLeft: "5px" }}>
-                                <label>Agama</label>
-                                <Field className="inpType"
-                                    name='agama'
-                                    component={AgamaDummySelector}
-                                />
-                            </div>
-                            <br />
-                            <div className="fieldForm">
-                                <Field className="inpType"
-                                    name='aliran'
-                                    type='text'
-                                    component={RenderField}
-                                    label='Aliran'
-                                />
-                            </div>
+                            <Row>
+                                <Col>
+                                    <div className="fieldForm" style={{ marginLeft: "5px" }}>
+                                        <label>Agama</label>
+                                        <Field className="inpType"
+                                            name='agama'
+                                            component={AgamaDummySelector}
+                                        />
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div className="fieldForm">
+                                        <Field className="inpType"
+                                            name='aliran'
+                                            type='text'
+                                            component={RenderField}
+                                            label='Aliran'
+                                        />
+                                    </div>
+                                </Col>
+                            </Row>
                             <br />
                             <div className="fieldForm">
                                 <Field
@@ -85,6 +91,7 @@ class FirstForm extends Component {
                             <br />
                         </Col>
                         <Col>
+                            <label style={{ marginRight: "100px", marginLeft: "100px", color: "#0061D7" , fontSize:"20px"}}><strong>KONTAK</strong></label>
                             <div className="fieldForm">
                                 <Field
                                     className="inpType"
@@ -105,7 +112,7 @@ class FirstForm extends Component {
                             <div className="fieldForm">
                                 <Field className="inpType"
                                     name='noTelp'
-                                    type='text'
+                                    type='number'
                                     component={RenderField}
                                     label='Nomor Telepon/Hp'
                                 />
@@ -119,10 +126,16 @@ class FirstForm extends Component {
                                     label='Asuransi yang anda miliki'
                                 />
                             </div>
+
+                            <div>
+                                <center>
+                                    <Button color="primary" type="submit" className="next spasiButton">SELANJUTNYA</Button>
+                                </center>
+                            </div>
                         </Col>
                         <Col>
+                            <label style={{ marginLeft: "55px", color: "#0061D7", fontSize:"20px" }}><strong>KONTAK DARURAT</strong></label>
                             <div className="fieldForm">
-                                <label>KONTAK DARURAT</label>
                                 <div className="fieldForm">
                                     <Field className="inpType"
                                         name='namaContactDarurat'
@@ -144,7 +157,7 @@ class FirstForm extends Component {
                                 <div className="fieldForm">
                                     <Field className="inpType"
                                         name='noTelpDarurat'
-                                        type='text'
+                                        type='number'
                                         component={RenderField}
                                         label='Nomor Telepon/Hp Darurat'
                                     />
@@ -152,11 +165,7 @@ class FirstForm extends Component {
                             </div>
                         </Col>
                     </Row>
-                    <div>
-                        <center>
-                            <Button color="primary" type="submit" className="next spasiButton">SELANJUTNYA</Button>
-                        </center>
-                    </div>
+
                 </form>
             </Card>
         )
