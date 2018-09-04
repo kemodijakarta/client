@@ -99,7 +99,7 @@ const validate = values => {
     errors.tanggalMulai = 'Harus di isi!';
   } else if (values.tanggalMulai < String(today) && values.tanggalMulai !== String(today)) {
     console.log('apa aja')
-    errors.tanggalMulai = 'Durasi Tidak Boleh Negatif'
+    errors.tanggalMulai = 'Tanggal Mulain Tidak Boleh Sebelum Hari Ini'
   }
   if (!values.tanggalSelesai) {
     errors.tanggalSelesai = 'Harus di isi!';

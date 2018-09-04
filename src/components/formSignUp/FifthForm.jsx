@@ -29,6 +29,10 @@ export default class FifthForm extends Component {
                 homestay: '',
                 kamarMandiDalam: undefined,
                 Tv: undefined,
+                wifi: undefined,
+                perawat: undefined,
+                alkes: undefined,
+                edukasi: undefined,
                 kunjungan: '',
                 konseling: '',
                 hiburan: '',
@@ -72,8 +76,12 @@ export default class FifthForm extends Component {
         }
         const fas = {
             homestay: dataUser.homestay,
-            kamarMandiDalam:dataUser.kamarMandiDalam,
-            Tv:dataUser.Tv,
+            kamarMandiDalam: dataUser.kamarMandiDalam,
+            Tv: dataUser.Tv,
+            wifi: dataUser.wifi,
+            perawat: dataUser.perawat,
+            alkes: dataUser.alkes,
+            edukasi: dataUser.edukasi,
             kunjungan: dataUser.kunjungan,
             konseling: dataUser.konseling,
             hiburan: dataUser.hiburan,
@@ -252,7 +260,7 @@ export default class FifthForm extends Component {
                                         <Table size="sm">
                                             <thead>
                                                 <tr>
-                                                    <th colSpan="2"><center>Fasilitas Perjalanan Kesehatan</center></th>
+                                                    <th colSpan="2"><center>Fasilitas Perjalanan</center></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -274,19 +282,71 @@ export default class FifthForm extends Component {
                                                         </tr>
                                                 }
                                             </tbody>
-                                            {
-                                                (fasilitas.kamarMandiDalam === undefined) ? <tbody>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody> : <tbody>
+                                            <tbody>
+                                                {
+                                                    (fasilitas.kamarMandiDalam === undefined) ?
                                                         <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        : <tr>
                                                             <td>Kamar Mandi Dalam</td>
                                                             <td>{String(fasilitas.kamarMandiDalam)}</td>
                                                         </tr>
-                                                    </tbody>
-                                            }
+                                                }
+                                            </tbody>
+                                            <tbody>
+                                                {
+                                                    (fasilitas.wifi === undefined) ?
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        : <tr>
+                                                            <td>wifi</td>
+                                                            <td>{String(fasilitas.wifi)}</td>
+                                                        </tr>
+                                                }
+                                            </tbody>
+                                            <tbody>
+                                                {
+                                                    (fasilitas.perawat === undefined) ?
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        : <tr>
+                                                            <td>Perawat 24 Jam</td>
+                                                            <td>{String(fasilitas.perawat)}</td>
+                                                        </tr>
+                                                }
+                                            </tbody>
+                                            <tbody>
+                                                {
+                                                    (fasilitas.alkes === undefined) ?
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        : <tr>
+                                                            <td>Alat Kesehatan</td>
+                                                            <td>{String(fasilitas.alkes)}</td>
+                                                        </tr>
+                                                }
+                                            </tbody>
+                                            <tbody>
+                                                {
+                                                    (fasilitas.edukasi === undefined) ?
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        : <tr>
+                                                            <td>Edukasi Kanker</td>
+                                                            <td>{String(fasilitas.edukasi)}</td>
+                                                        </tr>
+                                                }
+                                            </tbody>
                                             <tbody>
                                                 <tr>
                                                     <td>Kunjungan Keluarga</td>
@@ -323,7 +383,7 @@ export default class FifthForm extends Component {
                                         <Table size="sm">
                                             <thead>
                                                 <tr>
-                                                    <th colSpan="2"><center>Budget</center></th>
+                                                    <th colSpan="2"><center>Budget Perjalanan Medis</center></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -364,8 +424,8 @@ export default class FifthForm extends Component {
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td>Budget</td>
-                                                    <td>{budget.budget}</td>
+                                                    <td>Budget (Dalam Juta)</td>
+                                                    <td>Rp.{budget.budget}</td>
                                                 </tr>
                                             </tbody>
                                         </Table>

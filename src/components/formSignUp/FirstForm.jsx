@@ -5,6 +5,7 @@ import RenderField from './RenderField'
 import { AgamaDummySelector } from './AgamaDummySelector'
 import { Button, Col, Row, Card } from 'reactstrap'
 import AlamatRender from './AlamatRenderfield'
+import RadioGroup from './BooleanSelector'
 
 
 class FirstForm extends Component {
@@ -69,23 +70,17 @@ class FirstForm extends Component {
                                     label="Tanggal Lahir" />
                             </div>
                             <br />
-                            <div className="fieldForm">
-                                <div>
-                                    <label>Jenis Kelamin (*)</label>
-                                    <div>
-                                        <label style={{ marginRight: "10px" }}>
-                                            <Field className="inpType"
-                                                name="sex" component="input" type="radio" value="Pria" />
-                                            {' '}
-                                            Pria
-                    </label>
-                                        <label style={{ marginLeft: "10px" }}>
-                                            <Field className="inpType" name="sex" component="input" type="radio" value="Wanita" />
-                                            {' '}
-                                            Wanita
-                    </label>
-                                    </div>
-                                </div>
+                            <div className="fieldForm" >
+                                <Field
+                                    className="inpType"
+                                    component={RadioGroup}
+                                    name="sex"
+                                    required={true}
+                                    options={[
+                                        { title: 'Pria', value: 'Pria' },
+                                        { title: 'Wanita', value: 'Wanita' }
+                                    ]}
+                                    label="Jenis Kelamin" />
                             </div>
                             <br />
                         </Col>

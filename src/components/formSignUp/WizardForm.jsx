@@ -15,7 +15,7 @@ class WizardForm extends Component {
         this.nextPage = this.nextPage.bind(this)
         this.previousPage = this.previousPage.bind(this)
         this.state = {
-            page: 4
+            page: 3
         }
     }
 
