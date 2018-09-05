@@ -112,7 +112,7 @@ class FirstForm extends Component {
                             <div className="fieldForm">
                                 <Field className="inpType"
                                     name='noTelp'
-                                    type='number'
+                                    type='text'
                                     component={RenderField}
                                     label='Nomor Telepon/Hp'
                                 />
@@ -157,7 +157,7 @@ class FirstForm extends Component {
                                 <div className="fieldForm">
                                     <Field className="inpType"
                                         name='noTelpDarurat'
-                                        type='number'
+                                        type='text'
                                         component={RenderField}
                                         label='Nomor Telepon/Hp Darurat'
                                     />

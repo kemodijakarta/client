@@ -65,11 +65,12 @@ class ThirdForm extends Component {
                             <Col>
                                 <Row>
                                     <Field name="kunjungan" id="kunjungan" component="input" type="checkbox" />
-                                    <label htmlFor="kunjungan" style={{ marginRight: "10px", marginLeft: "10px" }}>Apa Keluarga Anda Akan Berkunjung Sewaktu-waktu ?</label>
+                                    <label htmlFor="kunjungan" style={{ marginRight: "10px", marginLeft: "10px" }}>Kunjungan Keluarga
+                                    </label>
                                 </Row>
                                 <Row>
                                     <Field name="konseling" id="konseling" component="input" type="checkbox" />
-                                    <label htmlFor="konseling" style={{ marginRight: "10px", marginLeft: "10px" }}>Apa Anda Membutuhkan Konseling/Siraman Rohani ?</label>
+                                    <label htmlFor="konseling" style={{ marginRight: "10px", marginLeft: "10px" }}>konseling</label>
                                 </Row>
                                 <br />
                                 <Row>

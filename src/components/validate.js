@@ -14,6 +14,8 @@ const validate = values => {
 
   today = yyyy + '-' + mm + '-' + dd
 
+  var numbers = /^[0-9]+$/
+
   const errors = {};
   if (!values.namaDepan) {
     errors.namaDepan = 'Harus di isi!';
@@ -40,9 +42,13 @@ const validate = values => {
   }
   if (!values.noTelp) {
     errors.noTelp = 'Harus di isi!';
+  }else if(!values.noTelp.match(numbers)){
+    errors.noTelp = 'Harus Angka!'
   }
   if (!values.noTelpDarurat) {
     errors.noTelpDarurat = 'Harus di isi!';
+  }else if(!values.noTelpDarurat.match(numbers)){
+    errors.noTelpDarurat = 'Harus Angka!'
   }
   if (!values.agama) {
     errors.agama = 'Harus di isi!';
