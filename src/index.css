@@ -6,9 +6,9 @@ a.nav-link {
 .clear {
   clear: both;
 }
-::-webkit-scrollbar { 
+/* ::-webkit-scrollbar { 
   display: none; 
-}
+} */
 nav.navbar.navbar-expand-md.navbar-light.bg-white {
   padding: 17px;
   /* background: red !important; */
@@ -826,12 +826,11 @@ a.daftarbtn.nav-link {
 
 .fieldForm{
   /* background: pink; */
-  margin:10px;
+  margin:10px 10px 0px 10px !important;
 }
 
 input[type="text"], input[type="email"],input[type="password"]{
-  width:100% !important;
-  /* background:yellow !important; */
+  width:100%;
 }
 
 .formContainer{ 
@@ -848,4 +847,11 @@ input[type="text"], input[type="email"],input[type="password"]{
   .errorStyle{
     font-weight: bold;
     color: red !important
+  }
+
+  Table{
+    font-size: 15px;
+  }
+  tbody > tr > td{
+    width:50px !important;
   }

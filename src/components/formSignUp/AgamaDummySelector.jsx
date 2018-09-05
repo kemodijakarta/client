@@ -2,6 +2,7 @@ import React from 'react';
 const agama = [
     'Islam',
     'Kristen',
+    'Katolik',
     'Protestan',
     'Hindu',
     'Budha',

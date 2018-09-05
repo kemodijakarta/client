@@ -7,7 +7,7 @@ import FourthForm from './FourthForm'
 // import { UserFormAction } from '../actions/UserFormAction'
 // import { UserAkomadsiAction } from '../actions/UserAkomodasiAction'
 // import { Values } from 'redux-form-website-template';
-import { Progress } from 'reactstrap';
+import { Progress, Container, Row, Col } from 'reactstrap';
 
 class WizardForm extends Component {
     constructor(props) {
@@ -68,6 +68,7 @@ class WizardForm extends Component {
                         {page === 3 && <ThirdForm previousPage={this.previousPage} onSubmit={this.nextPage} />}
                         {page === 4 && <FourthForm previousPage={this.previousPage} onSubmit={onSubmit} />}
                     </div>
+                    {/* <Values form="wizard"/> */}
                 </div>
             </div>
         )

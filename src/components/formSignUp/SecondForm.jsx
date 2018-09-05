@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import validate from '../validate'
 import { Field, reduxForm } from 'redux-form'
 import RenderField from './RenderField'
-import { Button, Row, Col,Card } from 'reactstrap'
+import { Button, Row, Col, Card } from 'reactstrap'
+import RadioGroup from './BooleanSelector'
 
 class SecondForm extends Component {
     render() {
@@ -10,9 +11,9 @@ class SecondForm extends Component {
         return (
             <Card>
                 <Card>
-                <center>
-                <h1>Kondisi Kesehatan Klien</h1>
-                </center>
+                    <center>
+                        <h1>Kondisi Kesehatan Klien</h1>
+                    </center>
                 </Card>
                 <form onSubmit={handleSubmit} className="wizardForm">
                     <div className="fieldForm">
@@ -26,8 +27,8 @@ class SecondForm extends Component {
                                 />
                             </Col>
                             <Col>
-                                <div>
-                                    <label>Stadium</label>
+                                {/* <div>
+                                    <label>Stadium (*)</label>
                                     <div>
                                         <label style={{ marginRight: "10px" }}>
                                             <Field name="stadium" component="input" type="radio" value="1" />
@@ -50,6 +51,20 @@ class SecondForm extends Component {
                                             4
                     </label>
                                     </div>
+                                </div> */}
+                                <div className="fieldForm">
+                                    <Field
+                                        className="inpType"
+                                        component={RadioGroup}
+                                        name="stadium"
+                                        required={true}
+                                        options={[
+                                            { title: '1', value: '1' },
+                                            { title: '2', value: '2' },
+                                            { title: '3', value: '3' },
+                                            { title: '4', value: '4' }
+                                        ]}
+                                        label="Stadium" />
                                 </div>
                             </Col>
                         </Row>
