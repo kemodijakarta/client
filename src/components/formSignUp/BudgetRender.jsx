@@ -11,9 +11,6 @@ export default class BudgetRender extends Component {
         this.handleOnChange = this.handleOnChange.bind(this)
         this.addDots = this.addDots.bind(this)
     }
-    componentDidMount() {
-        console.log(this.props)
-    }
 
     handleOnChange = (e) => {
         this.setState({
