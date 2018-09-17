@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import history from '../../history'
 import { Container, Table, Col, Row, Button } from 'reactstrap'
+import {reduxForm,reset} from 'redux-form'
 
-export default class FifthForm extends Component {
+class FifthForm extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -277,112 +278,6 @@ export default class FifthForm extends Component {
                                             <td>{fasilitas.homestay}</td>
                                         </tr>
                                     </tbody>
-                                    {/* // */}
-                                    {/* <tbody>
-                                        {
-                                            (fasilitas.tv === undefined) ?
-                                                <tr>
-
-
-                                                </tr>
-                                                : <tr>
-                                                    <td>Tv</td>
-                                                    {fasilitas.tv === true ? (<td>Iya</td>) : <td>Tidak</td>}
-                                                </tr>
-                                        }
-                                    </tbody>
-                                    <tbody>
-                                        {
-                                            (fasilitas.kamarMandiDalam === undefined) ?
-                                                <tr>
-
-
-                                                </tr>
-                                                : <tr>
-                                                    <td>Kamar Mandi Dalam</td>
-                                                    {fasilitas.kamarMandiDalam === true ? (<td>Iya</td>) : <td>Tidak</td>}
-                                                </tr>
-                                        }
-                                    </tbody>
-                                    <tbody>
-                                        {
-                                            (fasilitas.wifi === undefined) ?
-                                                <tr>
-
-
-                                                </tr>
-                                                : <tr>
-                                                    <td>wifi</td>
-                                                    {fasilitas.wifi === true ? (<td>Iya</td>) : <td>Tidak</td>}
-                                                </tr>
-                                        }
-                                    </tbody>
-                                    <tbody>
-                                        {
-                                            (fasilitas.perawat === undefined) ?
-                                                <tr>
-
-
-                                                </tr>
-                                                : <tr>
-                                                    <td>Perawat 24 Jam</td>
-                                                    {fasilitas.perawat === true ? (<td>Iya</td>) : <td>Tidak</td>}
-                                                </tr>
-                                        }
-                                    </tbody>
-                                    <tbody>
-                                        {
-                                            (fasilitas.alkes === undefined) ?
-                                                <tr>
-
-
-                                                </tr>
-                                                : <tr>
-                                                    <td>Alat Kesehatan</td>
-                                                    {fasilitas.alkes === true ? (<td>Iya</td>) : <td>Tidak</td>}
-                                                </tr>
-                                        }
-                                    </tbody>
-                                    <tbody>
-                                        {
-                                            (fasilitas.edukasi === undefined) ?
-                                                <tr>
-
-
-                                                </tr>
-                                                : <tr>
-                                                    <td>Edukasi Kanker</td>
-                                                    {fasilitas.edukasi === true ? (<td>Iya</td>) : <td>Tidak</td>}
-                                                </tr>
-                                        }
-                                    </tbody>
-                                    <tbody>
-                                        {
-                                            (fasilitas.kunjungan === undefined) ?
-                                                <tr>
-
-
-                                                </tr>
-                                                : <tr>
-                                                    <td>Kunjungan</td>
-                                                    {fasilitas.kunjungan === true ? (<td>Iya</td>) : <td>Tidak</td>}
-                                                </tr>
-                                        }
-                                    </tbody>
-                                    <tbody>
-                                        {
-                                            (fasilitas.konseling === undefined) ?
-                                                <tr>
-
-
-                                                </tr>
-                                                : <tr>
-                                                    <td>Konseling/Siraman Rohani</td>
-                                                    {fasilitas.konseling === true ? (<td>Iya</td>) : <td>Tidak</td>}
-                                                </tr>
-                                        }
-                                    </tbody> */}
-                                    {/* // */}
                                     <tbody>
                                         <tr>
                                             <td>Fasilitas</td>
@@ -468,3 +363,9 @@ export default class FifthForm extends Component {
         )
     }
 }
+
+const afterSubmit = (result,dispatch) => dispatch(reset('wizard'))
+export default reduxForm({
+    form:'wizard',
+    onSubmitSuccess:afterSubmit
+})(FifthForm)

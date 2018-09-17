@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import validate from '../validate'
-import { Field, reduxForm } from 'redux-form'
+import { Field, reduxForm} from 'redux-form'
 import { RumahSakitDummySelector } from './AgamaDummySelector'
 import renderField from './RenderField';
 import axios from 'axios'
@@ -11,9 +11,9 @@ import BudgetRender from './BudgetRender'
 class FortForm extends Component {
     submit = (values) => {
         // console.log(values)
-        axios.post('http://neoal.xyz:3000/api/email/send', { values })
+        axios.post('http://neoal.xyz/api/email/send', { values })
             .then(response => {
-                // console.log(response.data.message)
+                // console.log(response.data)
                 if(response.data.message){
                     localStorage.setItem('formUser',JSON.stringify(values))
                     history.push('/notif-form')
@@ -105,6 +105,6 @@ class FortForm extends Component {
 export default reduxForm({
     form: 'wizard',
     destroyOnUnmount: false,
-    forceUnregisterOnUnmount: true,
-    validate
+    forceUnregisterOnUnmount: true, 
+    validate,
 })(FortForm)
