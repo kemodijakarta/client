@@ -51,7 +51,7 @@ class About extends Component {
                         <li>Ruben Kurniawan - <span>Pemilik Klinik Taman Anggrek</span></li>
                         <li>Vincent Sutantiyo - <span>Kepala Pelayanan di Rumah Sakit Khusus Kanker</span></li>
                         <li>Ricky Prasetyo - <span>Manager</span></li>
-                        <li>Sigit Setiadi - <span>Trip Planner</span></li>
+                        <li>Sigit - <span>Trip Planner</span></li>
                         <li>Perawat Lisa - <span>Konsultan Perjalanan Medis</span></li>
                         <li>Nisa - <span>Resepsionis</span></li>
                         <li>Ali Hozi - <span>Akunting</span></li>

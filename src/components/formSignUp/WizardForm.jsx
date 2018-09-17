@@ -7,7 +7,7 @@ import FourthForm from './FourthForm'
 // import { UserFormAction } from '../actions/UserFormAction'
 // import { UserAkomadsiAction } from '../actions/UserAkomodasiAction'
 // import { Values } from 'redux-form-website-template';
-import { Progress, Container, Row, Col } from 'reactstrap';
+import { Progress } from 'reactstrap';
 
 class WizardForm extends Component {
     constructor(props) {
