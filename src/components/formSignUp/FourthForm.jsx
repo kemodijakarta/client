@@ -11,7 +11,7 @@ import BudgetRender from './BudgetRender'
 class FortForm extends Component {
     submit = (values) => {
         // console.log(values)
-        axios.post('http://neoal.xyz/api/email/send', { values })
+        axios.post('http://neoal.xyz:3000/api/email/send', { values })
             .then(response => {
                 // console.log(response.data)
                 if(response.data.message){
