@@ -5,65 +5,76 @@ import FixedButtonDaftarMobile from '../components/FixedButtonDaftarMobile';
 // import TopHeader from '../components/TopHeader';
 import Navigation from '../components/Navigation';
 import KalkulatorIntro from '../components/KalkulatorIntro';
-import Testimoni from '../components/Testimoni';
+import KomikStrip from '../components/KomikStrip';
+// import Testimoni from '../components/Testimoni';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { moveUrl } from '../actions/action.url';
 
-import { Button } from 'reactstrap';
+import {
+  Button,
+  // Modal,
+  // ModalHeader,
+  // ModalBody,
+  // ModalFooter,
+  // UncontrolledCarousel
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Home extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
-      showForm : false
+      showForm : false,
+      popUpFirst: true,
     }
+    this.closePopUp = this.closePopUp.bind(this);
   }
   componentWillMount(){
     let currURL = this.props.history.location.pathname;
     this.props.moveUrl(currURL); //dispatch
   }
-  componentDidMount(){
-    // console.log('route ==>', this.props.history.location.pathname)
+  componentDidMount() {
   }
-  componentDidUpdate() {
-    // console.log('PROPS URL==>', this.props.urls)
+  closePopUp () {
+    this.setState({
+      popUpFirst: false
+    })
   }
   render() {
+    const { slideSection } = this.props.lang.home
     return (
       <div>
         <div className="headerWrap">
-          {/* <TopHeader/> */}
-          <Navigation/>
+          <Navigation lang={this.props.lang.menu}/>
         </div>
-        <FixedButtonDaftarMobile/>
+        <FixedButtonDaftarMobile btnlang={slideSection.btnDaftarMobile}/>
         <div>
             <div className="section home" id="home">
               <div className="gradientShadow"></div>
               <div className="intro">
-                <h1 className="animated bounceInDown">Percayakan perjalanan medis anda pada kami</h1>
-                <p className="animated bounceInLeft">Kemodijakarta.com adalah sebuah layanan perjalanan medis yang di lahirkan untuk mendampingi pasien kanker dari luar Jakarta ketika berkunjung ke Pusat Layanan Kanker di Jakarta dan sekitarnya</p>
-                <ThumbnailLayanan/>
+                <h1 className="animated bounceInDown">{slideSection.h1}</h1>
+                <p className="animated bounceInLeft">{slideSection.h3}</p>
+                <ThumbnailLayanan lang={this.props.lang}/>
                 <Link className="btnLayananMobile" to="/layananmobile">
                   <Button color="info" className="animated bounceInUp">
-                    Lihat Layanan
+                    {slideSection.btnlayanan}
                   </Button>
                 </Link>
               </div>
               <img src={require('../assets/img/home-image.png')} alt="slideImage"/>
             </div>
         </div>
-        <KalkulatorIntro />
-        <Testimoni />
+        <KomikStrip lang={this.props.lang}/>
+        <KalkulatorIntro lang={this.props.lang}/>
+        {/* <Testimoni lang={this.props.lang}/> */}
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  // console.log('STATEEEEEEEEEEEEEE',state)
   return {
     urls: state.urlReducer
   }

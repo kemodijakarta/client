@@ -32,7 +32,7 @@ class WizardForm extends Component {
     }
 
     componentDidMount() {
-        // console.log(this.props)
+        console.log('Props untuk alang => ', this.props.lang)
     }
 
     render() {

@@ -13,6 +13,9 @@ class Auth extends Component {
     let currURL = this.props.history.location.pathname;
     this.props.moveUrl(currURL);  //dispatch
   }
+  componentDidMount() {
+    console.log('Props untuk alang => ', this.props.lang)
+  }
   render() {
     return (
       <div>
