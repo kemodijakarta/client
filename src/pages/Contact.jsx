@@ -14,24 +14,28 @@ import { moveUrl } from '../actions/action.url';
 
 class Contact extends Component {
   render() {
+    const { h1 } = this.props.lang.contact.form
+    const { kontak } = this.props.lang.contact
+    const { slideSection } = this.props.lang.home
     return (
       <div>
         <div className="headerWrap">
-          <Navigation/>
+          <Navigation lang={this.props.lang.menu}/>
         </div>
         <FixedButtonDaftarMobile/>
+        <FixedButtonDaftarMobile btnlang={slideSection.btnDaftarMobile}/>
         <Container>
           <div className="marginTop"></div>
           <Row>
             <Col md="6">
               <div className="wrapContact">
-                <h3>Hubungi kami</h3>
-                <FormBukuTamu/>
+                <h3>{h1}</h3>
+                <FormBukuTamu lang={this.props.lang.contact}/>
               </div>
             </Col>
             <Col md="6">
               <div className="wrapContact">
-                <h3>Informasi lebih lanjut :</h3>
+                <h3>{kontak.h1}</h3>
                 <p>
                   <img style={{ width: 20, marginRight: 20 }} src={require('../assets/img/gmail.png')} alt="emailogo"/>
                   info[at]kemodijakarta.com
