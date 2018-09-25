@@ -10,8 +10,8 @@ class KalkulatorIntro extends Component {
             <Container>
               <Row style={{ padding: '100px 0px' }}>
                 <Col lg="6">
-                  <div style={{ width: '100%', height: '300px', background: 'yellow', overflow: 'hidden', borderRadius: '0px' }}>
-                    <img style={{ width: '100%', marginTop: '-30px' }} src={require('../assets/img/calc-medic2.jpg')} alt="kalkulatorImageIntro"/>
+                  <div style={{ width: '100%', overflow: 'hidden', borderRadius: '0px' }}>
+                    <img style={{ width: '100%', marginTop: '-30px', marginBottom: '20px' }} src={require('../assets/img/calc-medic2.jpeg')} alt="kalkulatorImageIntro"/>
                   </div>
                   <div className="clear"></div>
                 </Col>

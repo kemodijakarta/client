@@ -47,6 +47,9 @@
         "h3": "Kami menyediakan kalkulator medis bagi anda yang ingin memulai perjalanan medis anda, hasil dari kalkulator medis merupakan gambaran pengeluaran yang akan anda jalani selama perjalanan medis di Jakarta.",
         "button": "Kalkulator Medis"
       },
+      "komik": [
+        "1.jpeg", "2.jpeg", "3.jpeg"
+      ],
       "testimoniSection": [
         {
           "nama": "Siti Komariah",
@@ -145,6 +148,9 @@
           "h3": "We provide medical calculators for those of you who want to start your medical journey, the results of a medical calculator are an overview of the expenses that you will live during a medical trip in Jakarta.",
           "button": "Medical Calculator"
         },
+        "komik": [
+          "1-en.jpeg", "2-en.jpeg", "3-en.jpeg"
+        ],
         "testimoniSection": [
           {
             "nama": "Siti Komariah",
@@ -167,10 +173,10 @@
     "about": {
       "tentang": {
         "h2": "About Us",
-        "desc": "Kemodijakarta.com is a medical travel assistance service that is born to patients from the region when visiting a Health Service Center in Jakarta. Kemodijakarta.com uses technology and human approaches to be able to provide optimal services to patients before and during treatment in Jakarta."
+        "desc": "Kemodijakarta.com is a medical travel assistance service that is born to serve patients from the region when visiting a Health Service Center in Jakarta. Kemodijakarta.com uses technology and human approaches to be able to provide optimal services to patients before and during treatment in Jakarta."
       },
       "tim": {
-        "h2": "Out Team",
+        "h2": "Our Team",
         "ruben": "The owner of the Taman Anggrek Clinic",
         "vincent": "Head of Service at the Cancer Special Hospital",
         "ricky": "Manager",
