@@ -9,11 +9,21 @@ import {
 import { Icon } from 'react-icons-kit';
 import { arrowLeft, arrowRight } from 'react-icons-kit/fa';
 
-const komiks = [
-    { img: require('../assets/kartun/1.jpeg') },
-    { img: require('../assets/kartun/2.jpeg') },
-    { img: require('../assets/kartun/3.jpeg') },
-]
+const komiks = () => {
+    if (localStorage.getItem('lang') == 'en') {
+      return [
+            { img: require('../assets/kartun/1-en.jpeg') },
+            { img: require('../assets/kartun/2-en.jpeg') },
+            { img: require('../assets/kartun/3-en.jpeg') },
+        ]
+    } else {
+        return [
+            { img: require('../assets/kartun/1.jpeg') },
+            { img: require('../assets/kartun/2.jpeg') },
+            { img: require('../assets/kartun/3.jpeg') },
+        ]
+    }
+} 
 
 class KomikStrip extends Component {
     constructor(props) {
@@ -41,7 +51,7 @@ class KomikStrip extends Component {
         console.log('komiks', this.state.indexShow-1)
         this.setState({
             modalKartun: true,
-            modalImage: komiks[this.state.indexShow-1].img,
+            modalImage: komiks()[this.state.indexShow-1].img,
             indexShow: this.state.indexShow-1
         })
     }
@@ -50,13 +60,13 @@ class KomikStrip extends Component {
         console.log('komiks', this.state.indexShow+1)
         this.setState({
             modalKartun: true,
-            modalImage: komiks[this.state.indexShow+1].img,
+            modalImage: komiks()[this.state.indexShow+1].img,
             indexShow: this.state.indexShow+1
         })
     }
 
     render() {
-        const komikStrip = () => komiks.map((komik, i) => {
+        const komikStrip = () => komiks().map((komik, i) => {
             return (
                 // <h1>komik</h1>
                 <Col md="4" key={komik.img}>

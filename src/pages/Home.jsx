@@ -12,6 +12,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { moveUrl } from '../actions/action.url';
 
+import MetaTags from 'react-meta-tags';
+
 import {
   Button,
   // Modal,
@@ -31,12 +33,6 @@ class Home extends Component {
     }
     this.closePopUp = this.closePopUp.bind(this);
   }
-  componentWillMount(){
-    let currURL = this.props.history.location.pathname;
-    this.props.moveUrl(currURL); //dispatch
-  }
-  componentDidMount() {
-  }
   closePopUp () {
     this.setState({
       popUpFirst: false
@@ -46,6 +42,12 @@ class Home extends Component {
     const { slideSection } = this.props.lang.home
     return (
       <div>
+        <MetaTags>
+          <title>Home</title>
+          <meta name="description" content="Kemodijakarta adalah startup." />
+          <meta property="og:title" content="Home" />
+          {/* <meta property="og:image" content="Some description." /> */}
+        </MetaTags>
         <div className="headerWrap">
           <Navigation lang={this.props.lang.menu}/>
         </div>
@@ -66,7 +68,7 @@ class Home extends Component {
               <img src={require('../assets/img/home-image.png')} alt="slideImage"/>
             </div>
         </div>
-        <KomikStrip lang={this.props.lang}/>
+        <KomikStrip komik={this.props.lang.home.komik}/>
         <KalkulatorIntro lang={this.props.lang}/>
         {/* <Testimoni lang={this.props.lang}/> */}
       </div>

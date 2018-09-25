@@ -15,6 +15,8 @@ import { moveUrl } from '../actions/action.url';
 import { Icon } from 'react-icons-kit';
 import { envelopeO, whatsapp } from 'react-icons-kit/fa';
 
+import MetaTags from 'react-meta-tags';
+
 class Contact extends Component {
   render() {
     const { h1 } = this.props.lang.contact.form
@@ -22,6 +24,12 @@ class Contact extends Component {
     const { slideSection } = this.props.lang.home
     return (
       <div>
+        <MetaTags>
+          <title>Contact</title>
+          <meta name="description" content="ini contact." />
+          <meta property="og:title" content="Contact" />
+          {/* <meta property="og:image" content="Some description." /> */}
+        </MetaTags>
         <div className="headerWrap">
           <Navigation lang={this.props.lang.menu}/>
         </div>
