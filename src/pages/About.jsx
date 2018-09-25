@@ -13,15 +13,15 @@ class About extends Component {
     this.props.moveUrl(currURL);
   }
   render() {
-    console.log('ini about get props ====> ', this.props.lang.about)
+    const { slideSection } = this.props.lang.home
     const { tentang, tim } = this.props.lang.about
     return (
       <div>
         <div className="headerWrap">
           <Navigation lang={this.props.lang.menu}/>
         </div>
-        <FixedButtonDaftarMobile/>
-        <Container>
+        <FixedButtonDaftarMobile btnlang={slideSection.btnDaftarMobile}/>
+        <Container style={{ paddingBottom: '100px' }}>
           <div className="marginTop"></div>
           <Row>
             <Col>
