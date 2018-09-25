@@ -11,6 +11,7 @@
       "slideSection": {
         "h1": "Percayakan perjalanan medis anda pada kami",
         "h3": "Kemodijakarta.com adalah sebuah layanan perjalanan medis yang di lahirkan untuk mendampingi pasien kanker dari luar Jakarta ketika berkunjung ke Pusat Layanan Kanker di Jakarta dan sekitarnya",
+        "daftarLayanan": "Daftar Layanan",
         "listLayanan2": [
           {
             "id": "akomodasi",
@@ -108,6 +109,7 @@
         "slideSection": {
           "h1": "Trust your medical trip with us",
           "h3": "Kemodijakarta.com is a medical travel service that was born to accompany cancer patients from outside Jakarta when visiting the Cancer Service Center in Jakarta and surrounding areas",
+          "daftarLayanan": "Service list",
           "listLayanan2": [
             {
               "id": "akomodasi",

@@ -12,6 +12,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { moveUrl } from '../actions/action.url';
 
+import { Icon } from 'react-icons-kit';
+import { envelopeO, whatsapp } from 'react-icons-kit/fa';
+
 class Contact extends Component {
   render() {
     const { h1 } = this.props.lang.contact.form
@@ -22,9 +25,8 @@ class Contact extends Component {
         <div className="headerWrap">
           <Navigation lang={this.props.lang.menu}/>
         </div>
-        <FixedButtonDaftarMobile/>
         <FixedButtonDaftarMobile btnlang={slideSection.btnDaftarMobile}/>
-        <Container>
+        <Container style={{ paddingBottom: '100px' }}>
           <div className="marginTop"></div>
           <Row>
             <Col md="6">
@@ -36,14 +38,16 @@ class Contact extends Component {
             <Col md="6">
               <div className="wrapContact">
                 <h3>{kontak.h1}</h3>
-                <p>
-                  <img style={{ width: 20, marginRight: 20 }} src={require('../assets/img/gmail.png')} alt="emailogo"/>
-                  info[at]kemodijakarta.com
-                </p>
-                <p>
-                  <img style={{ width: 20, marginRight: 20 }} src={require('../assets/img/whatsapp.png')} alt="emailogo"/>
-                  0812-288-566-99
-                </p>
+                <div style={{ position: 'relative', display: 'table', background: 'rgb(245, 245, 245)', borderRadius: '20px', marginBottom: '20px', width: '100%', padding: '10px', marginTop: '20px'}}>
+                  <Icon icon={envelopeO} size="25" style={{ position: 'absolute', top: '10px', left: '15px', background: '#ff4b4b', padding: '5px', color: 'white', float: 'left', borderRadius: '30px' }}/>
+                  <span style={{ color: '#6f6f6f', padding: '5px 8px 5px 50px', fontSize: '18px', float: 'left' }}>info[at]kemodijakarta.com</span>
+                </div>
+                <div className="clear"></div>
+                <div style={{ position: 'relative', display: 'table', background: 'rgb(245, 245, 245)', borderRadius: '20px', marginBottom: '20px', width: '100%', padding: '10px'}}>
+                  <Icon icon={whatsapp} size="30" style={{ position: 'absolute', top: '10px', left: '15px', background: '#56C447', padding: '3px', color: 'white', float: 'left', borderRadius: '30px' }}/>
+                  <span style={{ color: '#6f6f6f', padding: '5px 8px 5px 50px', fontSize: '18px', float: 'left' }}>0812-288-566-99</span>
+                </div>
+                <div className="clear"></div>
               </div>
             </Col>
           </Row>

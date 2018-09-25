@@ -79,7 +79,7 @@ class LayananMobile extends Component {
                     </Row>
                     <Row>
                         <Col sm="12">
-                          <h3>Daftar Layanan</h3>
+                          <h3>{slideSection.daftarLayanan}</h3>
                         </Col>
                         <Col sm="12">
                             <ListGroup>
