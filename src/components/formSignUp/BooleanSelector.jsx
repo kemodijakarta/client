@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { FormGroup, Label, Col } from "reactstrap";
 
 export default class RadioGroup extends Component {
     render() {
@@ -6,13 +7,13 @@ export default class RadioGroup extends Component {
         const hasError = meta.touched && meta.error;
 
         return (
-            <div>
-                <label>{label}</label>
-                <div>
+            <FormGroup row>
+                <Label sm={2}>{label}</Label>
+                <Col sm ={10}>
                     {options.map(o => <label key={o.value} style={{ marginLeft: "10px" }}><input type="radio" {...input} value={o.value} checked={o.value === input.value} /> {o.title}</label>)}
                     {hasError && <span className="errorStyle" style={{ marginLeft: "10px" }}>{meta.error}</span>}
-                </div>
-            </div>
+                </Col>
+            </FormGroup>
         );
     }
 }

@@ -1,27 +1,37 @@
-import React from 'react';
+import React from "react";
+import { FormGroup, Input, Label, Col } from "reactstrap";
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => {
-  if (touched&&error) {
+const renderField = ({ input, label,placeholder, type, meta: { touched, error } }) => {
+  if (touched && error) {
     return (
-      <div>
-        <label>{label}</label>
-        <div>
-          <input className="errorStyle" {...input}  placeholder={label} type={type} />
+      <FormGroup row>
+        <Label sm={2} >
+          {label}
+        </Label>
+        <Col sm={10} >
+          <Input
+            className="errorStyle"
+            {...input}
+            placeholder={placeholder}
+            type={type}
+          /> <br/>
           {touched && error && <span className="errorStyle">{error}</span>}
-        </div>
-      </div>
-    )
+        </Col>
+      </FormGroup>
+    );
   } else {
     return (
-      <div>
-        <label>{label}</label>
-        <div>
-          <input {...input} placeholder={label} type={type} />
+      <FormGroup row>
+        <Label sm={2} >
+          {label}
+        </Label>
+        <Col sm={10} >
+          <Input {...input} placeholder={placeholder} type={type} />
           {/* {touched && error && <span>{error}</span>} */}
-        </div>
-      </div>
-    )
+        </Col>
+      </FormGroup>
+    );
   }
-}
+};
 
 export default renderField;

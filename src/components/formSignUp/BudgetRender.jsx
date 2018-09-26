@@ -12,7 +12,7 @@ export default class BudgetRender extends Component {
         this.addDots = this.addDots.bind(this)
     }
     componentDidMount() {
-        console.log(this.props)
+        // console.log(this.props)
     }
 
     handleOnChange = (e) => {

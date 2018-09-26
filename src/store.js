@@ -4,6 +4,7 @@ import bukuTamu from './reducers/reducer.bukutamu';
 import urlReducer from './reducers/reducer.url';
 import signUp from './reducers/reducer.signUp';
 import signIn from './reducers/reducer.signIn';
+import DaftarForm from './reducers/DaftarForm'
 import {reducer as formReducer} from 'redux-form'
 
 const rootReducer = combineReducers({
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     urlReducer,
     signUp,
     signIn,
+    DaftarForm,
     form:formReducer
 })
 
