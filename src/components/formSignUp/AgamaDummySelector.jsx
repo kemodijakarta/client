@@ -1,4 +1,5 @@
 import React from 'react';
+
 const agama = [
     'Islam',
     'Kristen',
@@ -19,6 +20,11 @@ const RumahSakit=[
     'RS Kanker Dharmais',
     'RS MRCCC',
     'RS Cipto Mangunkusumo'
+]
+
+const jenisBrosur =[
+    'Brosur Fisik',
+    'Brosur Digital'
 ]
 
 export const AgamaDummySelector = ({ input, meta: { touched, error } }) => (
@@ -50,4 +56,15 @@ export const RumahSakitDummySelector = ({ input, meta: { touched, error } }) => 
         {touched && error && <span className="errorStyle">{error}</span>}
     </div>
 );
+
+export const Brosur = ({ input, meta: { touched, error } }) => (
+    <div>
+        <select {...input}>
+            <option value=''>Jenis Brosur</option>
+            {jenisBrosur.map(val => <option value={val} key={val}>{val}</option>)}
+        </select>
+        {touched && error && <span className="errorStyle">{error}</span>}
+    </div>
+);
+
 

@@ -133,6 +133,12 @@ const validate = values => {
   }else if(values.tglLahir >=  String(today)){
     errors.tglLahir = 'Tanggal Lahir Anda Sebelum Tanggal Hari Ini'
   }
+  if(!values.brosur){
+    errors.brosur = 'Harus di isi!'
+  }
+  if(!values.kodeBrosur){
+    errors.kodeBrosur = 'Harus di isi!'
+  }
   return errors;
 };
 
