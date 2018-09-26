@@ -5,7 +5,7 @@ class FixedButtonDaftarMobile extends Component {
     render() {
         return (
             <div className="daftarFloat">
-              <Link to="/register">DAFTAR</Link>
+              <Link to="/register">{this.props.btnlang}</Link>
             </div>
         );
     }

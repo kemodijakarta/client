@@ -10,6 +10,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 
 class FortForm extends Component {
+
   submit = values => {
     // console.log(values)
    this.props.DaftarForm(values)

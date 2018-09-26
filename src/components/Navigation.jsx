@@ -25,7 +25,9 @@ class Navigation extends Component {
       showHeader: false,
       showLogin: false,
     }
-    this.showDaftarContainer = this.showDaftarContainer.bind(this)
+    this.showDaftarContainer = this.showDaftarContainer.bind(this);
+    this.toEnglish = this.toEnglish.bind(this);
+    this.toIndonesia = this.toIndonesia.bind(this);
   }
 
   toogle = () => {
@@ -42,13 +44,54 @@ class Navigation extends Component {
       showLogin: !this.state.showLogin
     })
   }
+
   Daftar(){
     history.push('/register')
   }
+
+  toIndonesia () {
+    localStorage.setItem('lang', 'id')
+    window.location.reload()
+  }
+
+  toEnglish () {
+    localStorage.setItem('lang', 'en')
+    window.location.reload()
+  }
   
   render() {
+    const { daftar, beranda, tentang, kalkulator, kontak } = this.props.lang
+    const colorLangID = () => {
+      if (localStorage.getItem('lang') === null || localStorage.getItem('lang') === 'id') {
+        let obj1 = { float: 'left', listStyle: 'none', fontSize: '14px' }
+        return obj1;
+      } else {
+        let obj2 = { float: 'left', listStyle: 'none', fontSize: '14px', color: '#89a4b2' }
+        return obj2;
+      }
+    }
+    const colorLangEN = () => {
+      if (localStorage.getItem('lang') === 'en') {
+        let obj1 = { listStyle: 'none', fontSize: '14px' }
+        return obj1;
+      } else {
+        let obj2 = { listStyle: 'none', fontSize: '14px', color: '#89a4b2' }
+        return obj2;
+      }
+    }
+
     return (
       <div>
+        <div style={{width: '100%', background: '#dfedf4', marginBottom: '-16px', padding: 0}}>
+          <ul>
+            <li style={colorLangID()} onClick={this.toIndonesia}>
+              ID
+            </li>
+            <li style={colorLangEN()} onClick={this.toEnglish}>
+              &nbsp; EN
+            </li>
+          </ul>
+        </div>
         <Navbar color="white" light expand="md">
           <Container>
             <NavbarBrand>
@@ -63,7 +106,7 @@ class Navigation extends Component {
                   <div style={{ background: 'red' }}>
                     <Button style={{marginTop: -10, marginBottom: -10, position: 'relative'}} onClick={this.Daftar}>
                     {/* <Button style={{marginTop: -10, marginBottom: -10, position: 'relative'}} onClick={this.showDaftarContainer}> */}
-                      DAFTAR
+                      {daftar}
                     </Button>
                     {
                       (this.state.showLogin) ?
@@ -74,18 +117,18 @@ class Navigation extends Component {
                   </div>
                 </NavItem>
                 <NavItem>
-                  <Link to="/">BERANDA</Link>
+                  <Link to="/">{beranda}</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/about">TENTANG</Link>
+                  <Link to="/about">{tentang}</Link>
                 </NavItem>
                 <NavItem>
                   <Link to="/kalkulator" target="_blank">
-                    KALKULATOR MEDIS
+                    {kalkulator}
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/contact">KONTAK</Link>
+                  <Link to="/contact">{kontak}</Link>
                 </NavItem>
               </Nav>
             </Collapse>

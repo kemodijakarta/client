@@ -13,7 +13,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-icons-kit": "^1.1.7",
+    "react-icons-kit": "^1.1.11",
+    "react-meta-tags": "^0.6.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
@@ -24,6 +25,7 @@
     "redux-form-website-template": "0.0.123",
     "redux-thunk": "^2.3.0"
   },
+  "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
