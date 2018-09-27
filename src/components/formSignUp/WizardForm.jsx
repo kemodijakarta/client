@@ -7,7 +7,7 @@ import FourthForm from './FourthForm'
 // import { UserFormAction } from '../actions/UserFormAction'
 // import { UserAkomadsiAction } from '../actions/UserAkomodasiAction'
 // import { Values } from 'redux-form-website-template';
-import { Progress } from 'reactstrap';
+import { Progress,Container } from 'reactstrap';
 
 class WizardForm extends Component {
     constructor(props) {
@@ -15,7 +15,7 @@ class WizardForm extends Component {
         this.nextPage = this.nextPage.bind(this)
         this.previousPage = this.previousPage.bind(this)
         this.state = {
-            page: 1
+            page: 4
         }
     }
 
@@ -39,8 +39,8 @@ class WizardForm extends Component {
         const { onSubmit } = this.props
         const { page } = this.state
         return (
-            <div>
-                <div style={{ width: '1000px', margin: '0 auto' }}>
+            <Container>
+                <div>
                     <div>
                         {page === 1 && <Progress multi>
                             <Progress animated bar value="25">1/4</Progress>
@@ -70,7 +70,7 @@ class WizardForm extends Component {
                     </div>
                     {/* <Values form="wizard"/> */}
                 </div>
-            </div>
+            </Container>
         )
     }
 }
