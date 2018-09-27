@@ -15,7 +15,7 @@ class WizardForm extends Component {
         this.nextPage = this.nextPage.bind(this)
         this.previousPage = this.previousPage.bind(this)
         this.state = {
-            page: 4
+            page: 1
         }
     }
 
@@ -41,7 +41,7 @@ class WizardForm extends Component {
         return (
             <Container>
                 <div>
-                    <div>
+                    <div style={{marginTop:"10px"}}>
                         {page === 1 && <Progress multi>
                             <Progress animated bar value="25">1/4</Progress>
                         </Progress>}

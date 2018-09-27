@@ -8,8 +8,8 @@ export default class RadioGroup extends Component {
 
         return (
             <FormGroup row>
-                <Label sm={2}>{label}</Label>
-                <Col sm ={10}>
+                <Label sm={2} md={12}>{label}</Label>
+                <Col sm={10} md={12}>
                     {options.map(o => <label key={o.value} style={{ marginLeft: "10px" }}><input type="radio" {...input} value={o.value} checked={o.value === input.value} /> {o.title}</label>)}
                     {hasError && <span className="errorStyle" style={{ marginLeft: "10px" }}>{meta.error}</span>}
                 </Col>

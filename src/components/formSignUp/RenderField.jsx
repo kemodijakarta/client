@@ -5,10 +5,10 @@ const renderField = ({ input, label,placeholder, type, meta: { touched, error } 
   if (touched && error) {
     return (
       <FormGroup row>
-        <Label sm={2} >
+        <Label sm={2} md={12} >
           {label}
         </Label>
-        <Col sm={10} >
+        <Col sm={10} md={12}>
           <Input
             className="errorStyle"
             {...input}
@@ -22,10 +22,10 @@ const renderField = ({ input, label,placeholder, type, meta: { touched, error } 
   } else {
     return (
       <FormGroup row>
-        <Label sm={2} >
+        <Label sm={2} md={12} >
           {label}
         </Label>
-        <Col sm={10} >
+        <Col sm={10} md={12}>
           <Input {...input} placeholder={placeholder} type={type} />
           {/* {touched && error && <span>{error}</span>} */}
         </Col>
