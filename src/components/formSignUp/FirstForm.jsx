@@ -50,6 +50,7 @@ class FirstForm extends Component {
                   className="inpType"
                   name="agama"
                   component={AgamaDummySelector}
+                  label="Agama"
                 />
               </Col>
               <Col md={8}>
@@ -84,7 +85,7 @@ class FirstForm extends Component {
             <h5>
               <strong style={{ color: "#0061D7" }}>
                 {" "}
-                <center>Kontak</center>{" "}
+                <center>KONTAK</center>{" "}
               </strong>
             </h5>
             <Field
@@ -120,7 +121,7 @@ class FirstForm extends Component {
             <h5>
               <strong style={{ color: "#0061D7" }}>
                 {" "}
-                <center>Kontak Darurat</center>{" "}
+                <center>KONTAK DARURAT</center>{" "}
               </strong>
             </h5>
             <Field
@@ -149,7 +150,7 @@ class FirstForm extends Component {
             />
           </Col>
         </Row>
-        <Row>
+        <Row style={{marginTop:"-60px"}}>
           <Col>
             <center>
               <Button
