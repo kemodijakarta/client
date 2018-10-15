@@ -16,10 +16,10 @@ class KalkulatorIntro extends Component {
                   <div className="clear"></div>
                 </Col>
                 <Col lg="6">
-                  <h1>{kalkulatorSection.h1}</h1>
-                  <p style={{ color: 'gray' }}>
+                  <h2  style={{ padding: '10px 0px 20px 0px', color: '#5a5a5a', fontFamily: 'Rubik' }}>{kalkulatorSection.h1}</h2>
+                  <h5 style={{ color: 'gray', lineHeight: '1.5em' }}>
                     {kalkulatorSection.h3}
-                  </p>
+                  </h5>
                   <br/>
                   <Link to="/kalkulator" target="_blank">
                     <Button color="info" size="lg">

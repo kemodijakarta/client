@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import FixedButtonDaftarMobile from '../components/FixedButtonDaftarMobile';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -11,6 +12,9 @@ class About extends Component {
   componentWillMount(){
     let currURL = this.props.history.location.pathname;
     this.props.moveUrl(currURL);
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
   render() {
     const { slideSection } = this.props.lang.home
@@ -56,6 +60,7 @@ class About extends Component {
             </Col>
           </Row>
         </Container>
+        <Footer/>
       </div>
     );
   }

@@ -558,6 +558,24 @@ a.daftarbtn.nav-link {
   }
 } 
 
+.footer > ul {
+  margin: 0;
+  padding: 10px 0px;
+}
+.footerAddress  {
+  float: left;
+}
+.footerAddressIcon {
+  color: white;
+}
+.footerAddress > p {
+  font-size: 13px !important;
+  line-height: 16px;
+  color: #bcd1de;
+  display: table;
+  padding-bottom: -10px;
+}
+
 /*
 =========================================================================
 =========================================================================

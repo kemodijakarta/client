@@ -8,12 +8,14 @@ import Contact from './pages/Contact';
 import Register from './components/formSignUp/WizardForm';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import NotifRegister from './components/formSignUp/FifthForm'
+import NotifRegister from './components/formSignUp/FifthForm';
 import { Router, Switch, Route } from 'react-router-dom';
 import LayananMobile from './pages/LayananMobile';
 
 import dataJSON from './template.json';
 import dataJSON2 from './templateRegister.json';
+
+// import {Helmet} from "react-helmet";
 
 class App extends Component {
   constructor(props) {
@@ -57,21 +59,28 @@ class App extends Component {
     } else {
       console.log('Bahasa', this.state.lang)
       return (
-        <Router history={history}>
-          <div className="bigWrap">
-            <Switch>
-              <Route exact path="/" component={(props) => <Home {...props} lang={this.state.lang}/>}></Route>
-              <Route path="/about" component={(props) => <About {...props} lang={this.state.lang}/>}></Route>
-              <Route path="/contact" component={(props) => <Contact {...props} lang={this.state.lang}/>}></Route>
-              <Route path="/register" component={(props) => <Register {...props} lang={this.state.langRegister}/>}></Route>
-              <Route path="/notif-form" component={NotifRegister}></Route>
-              <Route path="/login" component={Login}></Route>
-              <Route path="/dashboard" component={Dashboard}></Route>
-              <Route path="/layananmobile" component={(props) => <LayananMobile {...props} lang={this.state.lang}/>}></Route>
-              <Route path="/kalkulator" component={() => window.location = 'http://kalkulator.kemodijakarta.com/#/'}></Route>
-            </Switch>
-          </div>
-        </Router>
+        <div>
+          {/* <Helmet>
+            <title>Kemodijakarta Helmet</title>
+            <meta name="description" content="Ini adalah deskripsi dari kemodijakarta" />
+            <meta name="theme-color" content="#008f68" />
+          </Helmet> */}
+          <Router history={history}>
+            <div className="bigWrap">
+              <Switch>
+                <Route exact path="/" component={(props) => <Home {...props} lang={this.state.lang}/>}></Route>
+                <Route path="/about" component={(props) => <About {...props} lang={this.state.lang}/>}></Route>
+                <Route path="/contact" component={(props) => <Contact {...props} lang={this.state.lang}/>}></Route>
+                <Route path="/register" component={(props) => <Register {...props} lang={this.state.langRegister}/>}></Route>
+                <Route path="/notif-form" component={NotifRegister}></Route>
+                <Route path="/login" component={Login}></Route>
+                <Route path="/dashboard" component={Dashboard}></Route>
+                <Route path="/layananmobile" component={(props) => <LayananMobile {...props} lang={this.state.lang}/>}></Route>
+                <Route path="/kalkulator" component={() => window.location = 'http://kalkulator.kemodijakarta.com/#/'}></Route>
+              </Switch>
+            </div>
+          </Router>
+        </div>
       );
     }
   }
