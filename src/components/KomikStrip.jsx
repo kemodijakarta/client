@@ -10,7 +10,7 @@ import { Icon } from 'react-icons-kit';
 import { arrowLeft, arrowRight } from 'react-icons-kit/fa';
 
 const komiks = () => {
-    if (localStorage.getItem('lang') == 'en') {
+    if (localStorage.getItem('lang') === 'en') {
       return [
             { img: require('../assets/kartun/1-en.jpeg') },
             { img: require('../assets/kartun/2-en.jpeg') },

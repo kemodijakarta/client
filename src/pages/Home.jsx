@@ -6,23 +6,18 @@ import FixedButtonDaftarMobile from '../components/FixedButtonDaftarMobile';
 import Navigation from '../components/Navigation';
 import KalkulatorIntro from '../components/KalkulatorIntro';
 import KomikStrip from '../components/KomikStrip';
-// import Testimoni from '../components/Testimoni';
+import Partnership from '../components/Partnership';
+import Footer from '../components/Footer';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { moveUrl } from '../actions/action.url';
 
-import MetaTags from 'react-meta-tags';
-
 import {
   Button,
-  // Modal,
-  // ModalHeader,
-  // ModalBody,
-  // ModalFooter,
-  // UncontrolledCarousel
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+
 
 class Home extends Component {
   constructor (props) {
@@ -42,12 +37,6 @@ class Home extends Component {
     const { slideSection } = this.props.lang.home
     return (
       <div>
-        <MetaTags>
-          <title>Home</title>
-          <meta name="description" content="Kemodijakarta adalah startup." />
-          <meta property="og:title" content="Home" />
-          {/* <meta property="og:image" content="Some description." /> */}
-        </MetaTags>
         <div className="headerWrap">
           <Navigation lang={this.props.lang.menu}/>
         </div>
@@ -70,7 +59,8 @@ class Home extends Component {
         </div>
         <KomikStrip komik={this.props.lang.home.komik}/>
         <KalkulatorIntro lang={this.props.lang}/>
-        {/* <Testimoni lang={this.props.lang}/> */}
+        <Partnership/>
+        <Footer/>
       </div>
     );
   }

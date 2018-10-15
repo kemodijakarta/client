@@ -7,6 +7,7 @@ import {
 import FormBukuTamu from '../components/FormBukuTamu';
 import FixedButtonDaftarMobile from '../components/FixedButtonDaftarMobile';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -15,21 +16,17 @@ import { moveUrl } from '../actions/action.url';
 import { Icon } from 'react-icons-kit';
 import { envelopeO, whatsapp } from 'react-icons-kit/fa';
 
-import MetaTags from 'react-meta-tags';
-
 class Contact extends Component {
+  componentDidMount() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   render() {
     const { h1 } = this.props.lang.contact.form
     const { kontak } = this.props.lang.contact
     const { slideSection } = this.props.lang.home
     return (
       <div>
-        <MetaTags>
-          <title>Contact</title>
-          <meta name="description" content="ini contact." />
-          <meta property="og:title" content="Contact" />
-          {/* <meta property="og:image" content="Some description." /> */}
-        </MetaTags>
         <div className="headerWrap">
           <Navigation lang={this.props.lang.menu}/>
         </div>
@@ -60,6 +57,7 @@ class Contact extends Component {
             </Col>
           </Row>
         </Container>
+        <Footer/>
       </div>
     );
   }

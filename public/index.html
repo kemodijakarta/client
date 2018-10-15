@@ -44,8 +44,19 @@
         /* background: yellow; */
       }
     </style>
-    <title>Kemodijakarta</title>
+    <!-- <title>Kemodijakarta</title> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- SEO SATU -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117358519-25"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-117358519-25');
+    </script>
   </head>
   <body>
     <noscript>
@@ -62,9 +73,9 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    
     <!-- WhatsHelp.io widget -->
     <script type="text/javascript">
-      // console.log('localstorage', localStorage.getItem('lang'))
       function bilingual() {
         if (localStorage.getItem('lang') === 'en') {
           return 'Call Us'
@@ -72,7 +83,6 @@
           return 'Hubungi Kami'
         }
       }
-      
       (function () {
           var options = {
               whatsapp: "+6281228856699", // WhatsApp number
