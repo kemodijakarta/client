@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 import Register from './components/formSignUp/WizardForm';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import NotifRegister from './components/formSignUp/FifthForm'
+import NotifRegister from './components/formSignUp/FifthForm';
 import { Router, Switch, Route } from 'react-router-dom';
 import LayananMobile from './pages/LayananMobile';
 

@@ -46,6 +46,8 @@ class FifthForm extends Component {
                 asalKota: '',
                 datangDengan: '',
                 rumahSakit: '',
+                brosur:'',
+                kodeBrosur:'',
                 budget: ''
             },
         }
@@ -96,6 +98,8 @@ class FifthForm extends Component {
             asalKota: dataUser.asalKota,
             datangDengan: dataUser.datangDengan,
             rumahSakit: dataUser.rumahSakit,
+            brosur:dataUser.brosur,
+            kodeBrosur:dataUser.kodeBrosur,
             budget: dataUser.budget
         }
         this.setState({
@@ -342,6 +346,18 @@ class FifthForm extends Component {
                                         <tr>
                                             <td>Rumah Sakit Tempat Terapi</td>
                                             <td>{budget.rumahSakit}</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td>Jenis Brosur</td>
+                                            <td>{budget.brosur}</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td>Kode Brosur</td>
+                                            <td>{budget.kodeBrosur}</td>
                                         </tr>
                                     </tbody>
                                     <tbody>
