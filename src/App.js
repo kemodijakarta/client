@@ -68,7 +68,7 @@ class App extends Component {
                 <Route path="/notif-form" component={NotifRegister}></Route>
                 <Route path="/login" component={Login}></Route>
                 <Route path="/dashboard" component={Dashboard}></Route>
-                <Route path="/layananmobile" component={(props) => <LayananMobile {...props} lang={this.state.lang}/>}></Route>
+                <Route path="/layananmobile" component={(props) => <LayananMobile {...props} lang={this.state.lang}/>}></Route>                                                     
                 <Route path="/kalkulator" component={() => window.location = 'http://kalkulator.kemodijakarta.com/#/'}></Route>
               </Switch>
             </div>
