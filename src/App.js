@@ -15,8 +15,6 @@ import LayananMobile from './pages/LayananMobile';
 import dataJSON from './template.json';
 import dataJSON2 from './templateRegister.json';
 
-// import {Helmet} from "react-helmet";
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -60,11 +58,6 @@ class App extends Component {
       console.log('Bahasa', this.state.lang)
       return (
         <div>
-          {/* <Helmet>
-            <title>Kemodijakarta Helmet</title>
-            <meta name="description" content="Ini adalah deskripsi dari kemodijakarta" />
-            <meta name="theme-color" content="#008f68" />
-          </Helmet> */}
           <Router history={history}>
             <div className="bigWrap">
               <Switch>
