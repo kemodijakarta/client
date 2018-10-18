@@ -5,10 +5,9 @@ const port = process.env.PORT || 4000;
 const path = require('path');
 const fs = require('fs');
 
-const filePath = path.resolve(__dirname, './build', 'index.html');
-
 app.get('/', function(request, response) {
   console.log('Home')
+  const filePath = path.resolve(__dirname, './build', 'index.html');
   fs.readFile(filePath, 'utf8', function(err, data) {
     if (err) {
       return console.log(err);
@@ -19,6 +18,7 @@ app.get('/', function(request, response) {
 
 app.get('/about', function(request, response) {
   console.log('About')
+  const filePath = path.resolve(__dirname, './build', 'index.html');
   fs.readFile(filePath, 'utf8', function(err,data) {
     if (err) {
       return console.log(err);
@@ -29,6 +29,7 @@ app.get('/about', function(request, response) {
 
 app.get('/contact', function(request, response) {
     console.log('Contact')
+    const filePath = path.resolve(__dirname, './build', 'index.html');
     fs.readFile(filePath, 'utf8', function(err,data) {
       if (err) {
         return console.log(err);
