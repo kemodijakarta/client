@@ -10,9 +10,10 @@ import { moveUrl } from '../actions/action.url';
 
 class About extends Component {
   componentDidMount () {
-    document.title = "kemodijakarta.com | About";
-    document.querySelector('meta[name="description"]').setAttribute("content", "Deskripsi about");
-    document.querySelector('meta[property="og:title"]').setAttribute("content", "OG title about");
+    document.title = "Kemodijakarta.com | Tentang Jasa Perjalanan Medis Jakarta";
+    document.querySelector('meta[name="description"]').setAttribute("content", "Selamat datang di Layanan Perjalanan Medis Rumah sakit Jakarta. Kami (kemodijakarta) adalah sebuah layanan pendampingan bagi penderita kanker yang menjalani pengobatan di jakarta...");
+    document.querySelector('meta[name="keywords"]').setAttribute("content", "perjalanan medis")
+    document.querySelector('meta[name="author"]').setAttribute("content", "PT Vitamin Masyarakat Sehat")
   }
   render() {
     const { slideSection } = this.props.lang.home

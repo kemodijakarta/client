@@ -18,9 +18,10 @@ import { envelopeO, whatsapp } from 'react-icons-kit/fa';
 
 class Contact extends Component {
   componentDidMount () {
-    document.title = "kemodijakarta.com | Contact";
-    document.querySelector('meta[name="description"]').setAttribute("content", "Deskripsi contact");
-    document.querySelector('meta[property="og:title"]').setAttribute("content", "OG title contact");
+    document.title = "Kemodijakarta.com | Kontak Jasa Perjalanan Medis Jakarta";
+    document.querySelector('meta[name="description"]').setAttribute("content", "Selamat datang di Layanan Perjalanan Medis Rumah sakit Jakarta. Kami (kemodijakarta) adalah sebuah layanan pendampingan bagi penderita kanker yang menjalani pengobatan di jakarta...");
+    document.querySelector('meta[name="keywords"]').setAttribute("content", "perjalanan medis")
+    document.querySelector('meta[name="author"]').setAttribute("content", "PT Vitamin Masyarakat Sehat")
   }
   render() {
     const { h1 } = this.props.lang.contact.form
