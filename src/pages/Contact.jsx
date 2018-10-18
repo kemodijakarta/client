@@ -22,10 +22,6 @@ class Contact extends Component {
     document.querySelector('meta[name="description"]').setAttribute("content", "Deskripsi contact");
     document.querySelector('meta[property="og:title"]').setAttribute("content", "OG title contact");
   }
-  // componentDidMount() {
-  //   document.body.scrollTop = 0;
-  //   document.documentElement.scrollTop = 0;
-  // }
   render() {
     const { h1 } = this.props.lang.contact.form
     const { kontak } = this.props.lang.contact

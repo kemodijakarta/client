@@ -14,13 +14,6 @@ class About extends Component {
     document.querySelector('meta[name="description"]').setAttribute("content", "Deskripsi about");
     document.querySelector('meta[property="og:title"]').setAttribute("content", "OG title about");
   }
-  // componentWillMount(){
-  //   let currURL = this.props.history.location.pathname;
-  //   this.props.moveUrl(currURL);
-
-  //   document.body.scrollTop = 0;
-  //   document.documentElement.scrollTop = 0;
-  // }
   render() {
     const { slideSection } = this.props.lang.home
     const { tentang, tim } = this.props.lang.about
