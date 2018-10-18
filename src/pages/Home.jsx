@@ -27,6 +27,11 @@ class Home extends Component {
     }
     this.closePopUp = this.closePopUp.bind(this);
   }
+  componentDidMount() {
+    document.title = "kemodijakarta.com | Home";
+    document.querySelector('meta[name="description"]').setAttribute("content", "kemodijakarta adalah sebuah layanan perjalanan medis untuk mendampingi pasien kanker yang terletak dijakarta. Kami memiliki layanan akomodasi, perawat homecare, edukasi, konseling dan meyediakan hiburan selama pengobatan dijakarta");
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "kemodijakarta.com | Perjalanan medis kanker");
+  }
   closePopUp () {
     this.setState({
       popUpFirst: false
