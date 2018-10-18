@@ -9,6 +9,11 @@ import { bindActionCreators } from 'redux';
 import { moveUrl } from '../actions/action.url';
 
 class About extends Component {
+  componentDidMount () {
+    document.title = "kemodijakarta.com | About";
+    document.querySelector('meta[name="description"]').setAttribute("content", "Deskripsi about");
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "OG title about");
+  }
   componentWillMount(){
     let currURL = this.props.history.location.pathname;
     this.props.moveUrl(currURL);

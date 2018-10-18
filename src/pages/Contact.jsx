@@ -17,6 +17,11 @@ import { Icon } from 'react-icons-kit';
 import { envelopeO, whatsapp } from 'react-icons-kit/fa';
 
 class Contact extends Component {
+  componentDidMount () {
+    document.title = "kemodijakarta.com | Contact";
+    document.querySelector('meta[name="description"]').setAttribute("content", "Deskripsi contact");
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "OG title contact");
+  }
   componentDidMount() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
