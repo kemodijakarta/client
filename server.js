@@ -28,15 +28,26 @@ app.get('/about', function(request, response) {
 })
 
 app.get('/contact', function(request, response) {
-    console.log('Contact')
-    const filePath = path.resolve(__dirname, './build', 'index.html');
-    fs.readFile(filePath, 'utf8', function(err,data) {
-      if (err) {
-        return console.log(err);
-      }
-      response.send(data);
-    })
+  console.log('Contact')
+  const filePath = path.resolve(__dirname, './build', 'index.html');
+  fs.readFile(filePath, 'utf8', function(err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    response.send(data);
   })
+})
+
+app.get('/kalkulator', function(request, response) {
+  console.log('Kalkulator')
+  const filePath = path.resolve(__dirname, './build', 'index.html');
+  fs.readFile(filePath, 'utf8', function(err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    response.send(data);
+  })
+})
 
 app.use(express.static(path.resolve(__dirname, './build')));
 
