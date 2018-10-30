@@ -13,8 +13,10 @@ class Footer extends Component {
           <Row>
             <Col md="4">
               <div className="footer">
-                <h3 style={{ color: 'white' }}>Kemodijakarta</h3>
-                <p style={{ color: '#bcd1de', fontSize: '12px' }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea quasi excepturi soluta sint libero voluptatum voluptatem dolore numquam perspiciatis aperiam quod ratione ipsum quisquam aliquam, odio repudiandae corporis optio mollitia.</p>
+                {/* <h3 style={{ color: 'white' }}>Kemodijakarta</h3> */}
+                <div style={{ padding: '0px 25%' }}>
+                  <img style={{ display: 'table', width: '100%', border: '20px solid white', marginLeft: '-50px' }} src={'./images/kemo-image-share.jpeg'} />
+                </div>
               </div>
             </Col>
             <Col md="4">
