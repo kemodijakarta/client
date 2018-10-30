@@ -82,13 +82,13 @@ class Navigation extends Component {
 
     return (
       <div>
-        <div style={{width: '100%', background: '#dfedf4', marginBottom: '-16px', padding: 0}}>
+        <div className="subHeaderTop">
           <ul>
             <li style={colorLangID()} onClick={this.toIndonesia}>
               ID
             </li>
             <li style={colorLangEN()} onClick={this.toEnglish}>
-              &nbsp; EN
+              EN
             </li>
           </ul>
         </div>

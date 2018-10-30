@@ -67,7 +67,7 @@ class Home extends Component {
         </div>
         <KomikStrip komik={this.props.lang.home.komik}/>
         <KalkulatorIntro lang={this.props.lang}/>
-        <Partnership/>
+        <Partnership lang={this.props.lang.home.kerjasama}/>
         <Footer/>
       </div>
     );

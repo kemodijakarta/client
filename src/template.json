@@ -67,7 +67,11 @@
           "nama": "Naruto Uzumaki",
           "testimoni": "2 tahun lalu saya pernah menggunakan jasa kemodijakarta, saya merasa senang sebagai penderita kanker.."
         }
-      ]
+      ],
+      "kerjasama": {
+        "h3": "Jaringan Kerjasama",
+        "h5": "Kami bekerja sama dengan berbagai perusahaan untuk menciptakan peluang bersama dalam mengedepankan produk dengan hasil yang berkualitas."
+      }
     },
     "about": {
       "tentang": {
@@ -168,7 +172,11 @@
             "nama": "Naruto Uzumaki",
             "testimoni": "2 years ago I have used Kemodijakarta services, I feel happy as a cancer patient.."
           }
-        ]
+        ],
+        "kerjasama": {
+          "h3": "Our Network",
+          "h5": "We work with various companies to create shared opportunities in promoting products with quality results."
+        }
     },
     "about": {
       "tentang": {
