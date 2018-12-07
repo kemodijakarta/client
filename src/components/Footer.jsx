@@ -15,7 +15,12 @@ class Footer extends Component {
               <div className="footer">
                 {/* <h3 style={{ color: 'white' }}>Kemodijakarta</h3> */}
                 <div style={{ padding: '0px 25%' }}>
-                  <img style={{ display: 'table', width: '100%', border: '20px solid white', marginLeft: '-50px' }} src={'./images/kemo-image-share.jpeg'} />
+                  <img style={{ display: 'table', width: '100%', border: '20px solid white', marginLeft: '-50px' }} src={'./images/kemo-image-share.jpeg'} alt="logo-footer" />
+
+<a href="http://www.hitwebcounter.com" target="_blank">
+<img src="http://hitwebcounter.com/counter/counter.php?page=7015718&style=0006&nbdigits=5&type=page&initCount=0" title="http://www.hitwebcounter.com/" alt="http://www.hitwebcounter.com/"   border="0" />
+</a>
+
                 </div>
               </div>
             </Col>
