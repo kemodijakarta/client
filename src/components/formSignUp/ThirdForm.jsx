@@ -21,9 +21,9 @@ class ThirdForm extends Component {
         </Row>
         <Row>
           <Col md={6} xs={12}>
-            <Field name="homestay" component={HomestayDummySelector} />
+            <Field name="homestay" component={HomestayDummySelector} label="Pilih Tempat Menginap" />
             <br />
-            <div>
+            <div style={{marginLeft:"30px"}}>
               <label htmlFor="fasilitas">Fasilitas :</label>
               <Row>
                 <Field
@@ -107,6 +107,7 @@ class ThirdForm extends Component {
             </div>
           </Col>
           <Col md={6} xs={12}>
+            <div style={{marginLeft:"30px"}}>
             <Row>
               <Field
                 name="kunjungan"
@@ -135,6 +136,7 @@ class ThirdForm extends Component {
                 konseling
               </label>
             </Row>
+            </div>
             <br />
             <Row>
               <div>

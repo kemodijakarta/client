@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Col,Label} from 'reactstrap'
 const agama = [
     'Islam',
     'Kristen',
@@ -27,43 +27,55 @@ const jenisBrosur =[
     'Brosur Digital'
 ]
 
-export const AgamaDummySelector = ({ input, meta: { touched, error } }) => (
+export const AgamaDummySelector = ({ label,input, meta: { touched, error } }) => (
     <div>
+        <Label sm={2} md={12}>{label}</Label>
+        <Col sm={10} md={12}>
         <select {...input}>
-            <option value="">Pilih  Agama...</option>
+            <option value="">Agama...</option>
             {agama.map(val => <option value={val} key={val}>{val}</option>)}
         </select>
         {touched && error && <span className="errorStyle">{error}</span>}
+        </Col>
     </div>
 );
 
-export const HomestayDummySelector = ({ input, meta: { touched, error } }) => (
+export const HomestayDummySelector = ({ label,input, meta: { touched, error } }) => (
     <div>
+        <Label sm={2} md={12}>{label}</Label>
+        <Col sm={10} md={12}>
         <select {...input}>
-            <option value="">Pilih Tempat Menginap...</option>
+            <option value="">Tempat Menginap...</option>
             {Homstay.map(val => <option value={val} key={val}>{val}</option>)}
         </select>
         {touched && error && <span className="errorStyle">{error}</span>}
+        </Col>
     </div>
 );
 
-export const RumahSakitDummySelector = ({ input, meta: { touched, error } }) => (
+export const RumahSakitDummySelector = ({ label,input, meta: { touched, error } }) => (
     <div>
+        <Label sm={2} md={12}>{label}</Label>
+        <Col sm={10} md={12}>
         <select {...input}>
             <option value="">Pilih Rumah Sakit...</option>
             {RumahSakit.map(val => <option value={val} key={val}>{val}</option>)}
         </select>
         {touched && error && <span className="errorStyle">{error}</span>}
+        </Col>
     </div>
 );
 
-export const Brosur = ({ input, meta: { touched, error } }) => (
+export const Brosur = ({ label,input, meta: { touched, error } }) => (
     <div>
+        <Label sm={2} md={12}>{label}</Label>
+        <Col sm={10} md={12}>
         <select {...input}>
             <option value=''>Jenis Brosur</option>
             {jenisBrosur.map(val => <option value={val} key={val}>{val}</option>)}
         </select>
         {touched && error && <span className="errorStyle">{error}</span>}
+        </Col>
     </div>
 );
 

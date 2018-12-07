@@ -54,29 +54,22 @@ class FortForm extends Component {
               label="Kota Asal"
               placeholder="Kota Asal Anda "
             />
-          </Col>
-          <Col md={6} xs={12}>
             <Field
               name="datangDengan"
               type="text"
               component={renderField}
               placeholder="Metoda Kedatangan,contoh:Pesawat,Kereta,dll"
-              label="kendaraan"
+              label="Kendaraan"
             />
-            <div>
-              <label>Rumah Sakit</label>
+          </Col>
+          <Col md={6} xs={12}>
               <Field
                 className="inpType"
                 name="rumahSakit"
                 component={RumahSakitDummySelector}
+                label="Pilih Rumah Sakit"
               />
-            </div>
-            <br />
-            <div>
-              <label>Mendapatkan Informasi Kemodijakarta Dari:</label>
-              <Field name="brosur" component={Brosur} />
-            </div>
-            <br/>
+              <Field name="brosur" component={Brosur} label="Mendapatkan Informasi Kemodijakarta Dari:" />
             <Field
               name="kodeBrosur"
               component={renderField}

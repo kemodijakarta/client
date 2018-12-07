@@ -4,8 +4,8 @@ import { FormGroup, Input, Label, Col } from "reactstrap";
 const alamatRender = (fields) => {
     return (
         <FormGroup row>
-            <Label>Alamat</Label>
-            <Col>
+            <Label sm={2} md={12}>Alamat</Label>
+            <Col sm={10} md={12}>
                     <Input {...fields.alamat.input} type="text" placeholder="Nama jalan Dan Nomor" />
                     {fields.alamat.meta.touched && fields.alamat.meta.error &&
                         <span className="errorStyle">{fields.alamat.meta.error}</span>}
